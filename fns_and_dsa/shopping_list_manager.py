@@ -14,7 +14,10 @@ def main():
         if choice == '1':
             # Prompt for and add an item
             request = input("kindly enter item name: ")
-            shopping_list.append(request)
+            if(request.isnumeric()):
+                shopping_list.append(int(request))
+            else:
+                shopping_list.append(request)
             pass
         elif choice == '2':
             # Prompt for and remove an item
