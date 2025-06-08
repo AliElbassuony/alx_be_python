@@ -13,7 +13,7 @@ def main():
 
         if choice == '1':
             # Prompt for and add an item
-            request = input("kindly enter item name: ")
+            request = input("Enter the item to add: ")
             if(request.isnumeric()):
                 shopping_list.append(int(request))
             else:
@@ -21,9 +21,12 @@ def main():
             pass
         elif choice == '2':
             # Prompt for and remove an item
-            request = input("Kindly enter item name: ")
-            shopping_list.remove(request)
-            print()
+            request = input("Enter the item to remove: ")
+            if(request.isnumeric()):
+                shopping_list.remove(int(request))
+            else:
+                shopping_list.remove(request)
+            
             pass
         elif choice == '3':
             # Display the shopping list
